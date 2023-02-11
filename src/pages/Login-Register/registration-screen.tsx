@@ -20,10 +20,14 @@ function RegistrationScreen() {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmationPassword, setConfirmationPassword] = useState<string>('');
-  const [passwordShown, setPasswordShown] = useState(false);
+  const [passwordShown, setPasswordShown] = useState<boolean>(false);
+  const [confirmationPasswordShown, setConfirmationPasswordShown] = useState<boolean>(false);
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
+  };
+  const toggleConfirmationPassword = () => {
+    setConfirmationPasswordShown(!confirmationPasswordShown);
   };
 
   const handleRegistration = (username: string, email: string, password: string, confirmationPassword:string, firstName: string, lastName: string) => {
@@ -43,7 +47,6 @@ function RegistrationScreen() {
     }) 
     .catch(err => console.log(err));
   }
-
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -100,9 +103,6 @@ function RegistrationScreen() {
             }}/>
         </Form.Group>
         <InputGroup className="mb-3">          
-            <Button variant="outline-secondary" id="addon" onClick={togglePassword} className="ShowButton">
-              <i className={passwordShown ? "fas fa-eye-slash" : "fas fa-eye" } />
-            </Button>  
             <Form.Control 
             required
             type={passwordShown ? "text" : "password"} 
@@ -111,14 +111,14 @@ function RegistrationScreen() {
             onChange={e => {
                 const val = e.target.value;
                 setPassword(val);
-            }}/>         
+            }}/>
+            <Button variant="outline-secondary" id="addon" onClick={togglePassword} className="ShowButton">
+              <i className={passwordShown ? "fas fa-eye-slash" : "fas fa-eye" } />
+            </Button>
         </InputGroup>
         <InputGroup className="mb-3" hasValidation>
-          <Button variant="outline-secondary" id="addon" onClick={togglePassword} className="ShowButton">
-            <i className={passwordShown ? "fas fa-eye-slash" : "fas fa-eye" } />
-          </Button>
           <Form.Control 
-            type={passwordShown ? "text" : "password"} 
+            type={confirmationPasswordShown ? "text" : "password"} 
             placeholder="Confirm Password" 
             value={confirmationPassword}
             isInvalid={password !== confirmationPassword && !!confirmationPassword}
@@ -126,6 +126,9 @@ function RegistrationScreen() {
                 const val = e.target.value;
                 setConfirmationPassword(val);
             }}/>
+            <Button variant="outline-secondary" id="addon2" onClick={toggleConfirmationPassword} className="ShowButton">
+              <i className={confirmationPasswordShown ? "fas fa-eye-slash" : "fas fa-eye" } />
+            </Button>
             <Form.Control.Feedback type="invalid">
               Passwords do not match!
             </Form.Control.Feedback>
