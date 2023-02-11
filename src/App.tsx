@@ -5,10 +5,10 @@ import Home from './pages/Home';
 //import LoginScreen from './Login/login-screen';
 import {
   Route,
-  Link,
   Routes,
   BrowserRouter
-} from 'react-router-dom'
+} from 'react-router-dom';
+import RegistrationScreen from './Login-Register/registration-screen';
 
 function App() {
   return (
