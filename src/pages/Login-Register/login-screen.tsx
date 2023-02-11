@@ -43,7 +43,7 @@ function LoginScreen() {
       </Form>
       <div className="SwitchLoginCreateGroup">
         <p>Don't have an account?</p>
-        <Link to="registration">Register</Link>
+        <Link to="/registration">Register</Link>
       </div>
     </div>
   );

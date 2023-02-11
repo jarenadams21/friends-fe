@@ -1,7 +1,7 @@
 import {Container, Row, Col} from 'react-bootstrap';
 import EventCard from './EventCard';
 
-function Home() {
+function Feed() {
     return (<>
     <h1>Hai</h1>
     <Container className="d-flex justify-content-center">
@@ -24,4 +24,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Feed;
