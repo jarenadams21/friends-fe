@@ -2,44 +2,13 @@ import React from 'react';
 import './App.css';
 import Nav from 'react-bootstrap/Nav';
 import 'bootstrap/dist/css/bootstrap.css';
+import Navbar from './pages/Navbar';
 
 
 function App() {
   return (
     <>
-      <Nav className="justify-content-center" activeKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
-      <p className="text-center mt-4 mb-4">Or right-aligned</p>
-      <Nav className="justify-content-end" activeKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
-      </Nav>
+      <Navbar></Navbar>
     </>
   );
 }
