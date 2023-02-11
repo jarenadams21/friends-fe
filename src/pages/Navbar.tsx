@@ -5,18 +5,19 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Navbar() {
   return (
     <>
-      <Nav className="justify-content-center" activeKey="/home">
+      <Nav className="justify-content-center" 
+      activeKey="home">
         <Nav.Item>
-          <Nav.Link href="/my-plans">Find Events</Nav.Link>
+          <Nav.Link href="home">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">My Plans</Nav.Link>
+          <Nav.Link href="my-plans">My Plans</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Profile</Nav.Link>
+          <Nav.Link href="my-profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
+          <Nav.Link href="disabled" disabled>
             Disabled
           </Nav.Link>
         </Nav.Item>
