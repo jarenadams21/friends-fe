@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Navbar from '../Navbar'
 import Select from 'react-select';
 import './profile.css';
 import { Button, Form } from 'react-bootstrap';
@@ -44,6 +44,7 @@ export function MultiSelect() {
 export default function Profile() {
     return (
         <div className="Container border">
+            <Navbar/>
             <header className='ProfileHeader'>Profile</header>
             <Form.Group className="mb-3 FormGroup">
                 <Form.Label>First Name</Form.Label>

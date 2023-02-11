@@ -1,9 +1,11 @@
 import {Container, Row, Col} from 'react-bootstrap';
 import EventCard from './EventCard';
+import Navbar from './Navbar';
 
 function Feed() {
     return (<>
     <h1>Hai</h1>
+    <Navbar/>
     <Container className="d-flex justify-content-center">
         <Row className="mt-5 mb-5">
             <EventCard></EventCard>
