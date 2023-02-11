@@ -8,13 +8,13 @@ function Navbar() {
       <Nav className="justify-content-center" 
       activeKey="home">
         <Nav.Item>
-          <Nav.Link href="home">Home</Nav.Link>
+          <Nav.Link href="feed">Home</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="my-plans">My Plans</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link href="my-profile">Profile</Nav.Link>
+          <Nav.Link href="profile">Profile</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="disabled" disabled>
