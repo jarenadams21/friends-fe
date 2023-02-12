@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { url } from "../../constants";
 import EventProps from "../Props/EventProps";
 import EventCard from "./EventCard";
+import './cards.css'
 
 export default function EventCardsList() {
     const [events, setEvents] = useState<EventProps[]>([])
@@ -25,16 +26,19 @@ export default function EventCardsList() {
     
     const eventCardsList = () => {
         return events.map(e => {
-            return <EventCard 
-            _id={e._id}
-            name={e.name}
-             location={e.location}
-             dateTime={e.dateTime}
-             image={imageArray[Math.floor(Math.random() * imageArray.length)]}
-             tags={e.tags}
-             description={e.description}
-             popularity={e.popularity} />
-        })
+            return (
+            <div className="cards">
+                <EventCard 
+                    _id={e._id}
+                    name={e.name}
+                    location={e.location}
+                    dateTime={e.dateTime}
+                    image={imageArray[Math.floor(Math.random() * imageArray.length)]}
+                    tags={e.tags}
+                    description={e.description}
+                    popularity={e.popularity} />
+            </div>
+        )})
     }
 
     return (

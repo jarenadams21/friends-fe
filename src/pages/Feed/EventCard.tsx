@@ -58,7 +58,7 @@ function TakeToEventButton(props: {eid:string}) {
 }
 
 const EventCard = (props: EventProps) => (
-  <Card className="hover:border-blue-600 pt-1" style={{ width: "18rem" }}>
+  <Card className="hover:border-blue-600 pt-1" style={{ width: "18rem", height: "100%" }}>
     <Card.Img
       className="mt-2.5"
       variant="top"
