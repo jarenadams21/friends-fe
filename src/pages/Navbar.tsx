@@ -10,6 +10,12 @@ function Navbar() {
         <Nav.Item>
         </Nav.Item>
         <Nav.Item>
+          <Nav.Link href="feed">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
+          <Nav.Link href="my-plans">My Plans</Nav.Link>
+        </Nav.Item>
+        <Nav.Item>
           <Nav.Link href="profile">Profile</Nav.Link>
         </Nav.Item>
         
