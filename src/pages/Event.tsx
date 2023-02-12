@@ -1,10 +1,13 @@
 import { Container } from 'react-bootstrap';
 import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FcCalendar } from 'react-icons/fc';
 import {SiGooglemaps} from 'react-icons/si';
 import Navbar from './Navbar';
 import {useParams} from 'react-router-dom';
+import EventProps from './Props/EventProps';
+import axios from 'axios';
+import { url } from '../constants';
 
 /*
     To Display:
@@ -85,9 +88,21 @@ function TagBubbles(props:any) {
 }
 
 function Event() {
-
+    const [eventProps, setEventProps] = useState<EventProps>();
+ 
     const params  = useParams();
     const id = params.id;
+    const eid = params.eid;
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+    useEffect(() => {
+        axios.get(url + "events/" + eid)
+            .then(res => {
+                console.log(res.data);
+                setEventProps(res.data);
+            }).catch(err => `Error: ${err}`);
+        console.log("Hi" + eventProps?._id);
+    }, []);
     return (
         <>
         <Navbar id={id}/>
@@ -101,10 +116,10 @@ function Event() {
             </div>
             <BookMark/>
             <p>
-            {p1.date}
+            {eventProps?.dateTime.toLocaleString().split('T')[0] }
             </p>
             <h1 className="text-5xl font-bold">
-            {p1.name} 
+            {eventProps?.name} 
             </h1>
             <div className="mb-5 mt-5">
             --Placeholder Div--
@@ -121,16 +136,16 @@ function Event() {
              size={50}
              />
             <h5>
-                    {p1.date}, 2023,
+            {eventProps?.dateTime.toLocaleString().split('T')[0] }
                 </h5>
                 <h5>
-                    6:00 PM - 9:00 PM (EST)
+                {eventProps?.dateTime.toLocaleString().split('T')[1].split('.')[0] } EST
                 </h5>
             </div>
             <div className="location ms-5 mt-3">
                 <SiGooglemaps size={50}/>
                 <h5>
-                    {p1.location}
+                    {eventProps?.location}
                 </h5>
             </div>
             </div>

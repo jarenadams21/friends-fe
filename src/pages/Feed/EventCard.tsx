@@ -28,14 +28,14 @@ function BookMark() {
   );
 }
 
-function TakeToEventButton() {
+function TakeToEventButton(props: {eid:string}) {
   const params  = useParams();
   const id = params.id;
 
   return (
     <a
       className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-      href="/plan/:id/:eid"
+      href={"/plan/" + id + "/" + props.eid}
     >
       <span className="sr-only"> Download </span>
 
@@ -69,7 +69,7 @@ const EventCard = (props: EventProps) => (
       <Card.Text>{props.description}</Card.Text>
       <Container className="d-flex justify-content-evenly">
         <BookMark />
-        <TakeToEventButton />
+        <TakeToEventButton eid={props._id} />
       </Container>
       <div></div>
     </Card.Body>

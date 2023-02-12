@@ -25,7 +25,9 @@ export default function EventCardsList() {
     
     const eventCardsList = () => {
         return events.map(e => {
-            return <EventCard name={e.name}
+            return <EventCard 
+            _id={e._id}
+            name={e.name}
              location={e.location}
              dateTime={e.dateTime}
              image={imageArray[Math.floor(Math.random() * imageArray.length)]}

@@ -1,8 +1,9 @@
 import TagProps from "./TagProps";
 
 export default interface EventProps {
+  _id: string;
   name: String;
-  location: Object;
+  location: string;
   dateTime: Date;
   image: string;
   tags: TagProps[];
