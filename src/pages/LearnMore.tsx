@@ -15,8 +15,8 @@ export default function LearnMore() {
   };
 
   return (
-    <div>
-    <Container>
+    <div id="section2">
+    <Container>    
       <section className="text-white">
           <h1 style={headerStyle}>About Time N' Place </h1> <hr />
           <p style={{ ...paragraphStyle, padding: "5px" }}>

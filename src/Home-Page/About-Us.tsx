@@ -16,7 +16,7 @@ export default function AboutUs() {
   return (
     <Container>
     <section className="text-white">
-      <h1 style={headerStyle}>About Us</h1> <hr />
+      <h1 style={headerStyle}>Why We Made This</h1> <hr />
       <p style={{ ...paragraphStyle, padding: "5px" }}>
         Time N’ Place is a solution born from a problem. As a team of university
         students, we’ve all experienced a lack of awareness for events around
