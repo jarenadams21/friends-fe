@@ -3,6 +3,7 @@ import EventCard from './Feed/EventCard';
 import EventCardsList from './Feed/EventCardsList';
 import {RiSearchLine} from 'react-icons/ri';
 import Navbar from './Navbar';
+import {useParams} from 'react-router-dom';
  
 const plans:any = ['hai', 'hai']
 
@@ -155,9 +156,12 @@ function Search() {
 }
 
 function MyPlans() {
+  const params  = useParams();
+  const id = params.id;
+
     return (
       <>
-      <Navbar/>
+      <Navbar id={id}/>
         <Container>
             <HeaderTemplate/>
             <CreateEvent/>

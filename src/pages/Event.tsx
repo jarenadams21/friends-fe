@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { FcCalendar } from 'react-icons/fc';
 import {SiGooglemaps} from 'react-icons/si';
 import Navbar from './Navbar';
+import {useParams} from 'react-router-dom';
 
 /*
     To Display:
@@ -84,9 +85,12 @@ function TagBubbles(props:any) {
 }
 
 function Event() {
+
+    const params  = useParams();
+    const id = params.id;
     return (
         <>
-        <Navbar/>
+        <Navbar id={id}/>
                 <Container className="p-5 bg-gradient-to-l from-green-50 via-blue-50 to-purple-50 mt-5 d-flex justify-content-evenly flex-column">
             <div className="">
             <img 

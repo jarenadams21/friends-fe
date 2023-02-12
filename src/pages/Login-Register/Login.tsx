@@ -32,7 +32,7 @@ function LoginScreen() {
       })
       .then((res) => {
         console.log(res);
-        const id = res.data.toString();
+        const id = res.data._id.toString();
         nav("/feed/" + id);
       })
       .catch((err) => console.log(err));
