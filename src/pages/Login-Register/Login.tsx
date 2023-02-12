@@ -32,7 +32,7 @@ function LoginScreen() {
       })
       .then((res) => {
         console.log(res);
-        const id = res.data.toString();
+        const id = res.data._id.toString();
         nav("/feed/" + id);
       })
       .catch((err) => console.log(err));
@@ -99,9 +99,8 @@ function LoginScreen() {
           <LogoCard />
         </div>
       </div>
-
       <div className="bg-danger">
-        <img src={backdrop} width="1500px" />
+        <img src={backdrop} width="1500px"/>
       </div>
     </div>
   );
