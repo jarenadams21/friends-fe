@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './registration-screen.css'
 import axios from 'axios';
 import { url } from '../../constants';
+import backdrop from "./backdrop.jpg";
+import LogoCard from "../../Home-Page/LogoCard";
 
 interface User {
   username: string,
@@ -22,16 +24,18 @@ function LoginScreen() {
 
   const handleLogin = (username: string, password: string) => {
     axios.get(url + "users/login", {
-      params : {
+      params: {
         username: username,
-        password: password,}}
+        password: password,
+      }
+    }
     )
-    .then(res => {
-      console.log(res);
-      const id = res.data.id;
-      nav("/feed/" + id)
-    }) 
-    .catch(err => console.log(err));
+      .then(res => {
+        console.log(res);
+        const id = res.data.id;
+        nav("/feed/" + id)
+      })
+      .catch(err => console.log(err));
   }
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -40,37 +44,46 @@ function LoginScreen() {
   }
 
   return (
-    <div className="Container">
-      <header className="Header">Log in</header>
-      <Form onSubmit={onSubmit}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control 
-            type="username" 
-            placeholder="Username"
-            onChange={e => {
+    <div style={{ display: "flex", justifyContent: "space-between"}}>
+      <div className="Container">
+        <div className="pt-28 px-8">
+        <header className="Header font-sans">Log in</header>
+        <hr className="pt-0" />
+        <Form onSubmit={onSubmit}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="username"
+              placeholder="Username"
+              onChange={e => {
                 const val = e.target.value;
                 setUsername(val);
-            }}/>
-        </Form.Group>
-        <InputGroup className="mb-3">
-          <Form.Control 
-            type={passwordShown ? "text" : "password"} 
-            placeholder="Password" 
-            onChange={e => {
+              }} />
+          </Form.Group>
+          <InputGroup className="mb-3">
+            <Form.Control
+              type={passwordShown ? "text" : "password"}
+              placeholder="Password"
+              onChange={e => {
                 const val = e.target.value;
                 setPassword(val);
-            }}/>
+              }} />
             <Button variant="outline-secondary" id="addon" onClick={togglePassword} className="ShowButton">
-              <i className={passwordShown ? "fas fa-eye-slash" : "fas fa-eye" } />
-            </Button>           
-        </InputGroup>
-        <Button variant="primary" type="submit">
-          Login
-        </Button>
-      </Form>
-      <div className="SwitchLoginCreateGroup">
-        <p>Don't have an account?</p>
-        <Link to="/registration/">Register</Link>
+              <i className={passwordShown ? "fas fa-eye-slash" : "fas fa-eye"} />
+            </Button>
+          </InputGroup>
+          <Button className="font-sans font-bold" variant="danger" type="submit">
+            Login
+          </Button>
+        </Form>
+        <div className="SwitchLoginCreateGroup font-sans">
+          <p>Don't have an account?</p>
+          <Link to="/registration/" className="font-sans font-bold">Register</Link>
+        </div>
+        </div>
+        </div>
+        <div className="absolute bottom-0 left-36"><LogoCard/></div>
+      <div>
+        <img src={backdrop} width="1500px"/>
       </div>
     </div>
   );
