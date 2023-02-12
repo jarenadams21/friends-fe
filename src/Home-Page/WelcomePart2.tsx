@@ -1,9 +1,7 @@
-import React from "react";
 import "react-bootstrap";
 import LearnMore from "../pages/LearnMore";
 import AboutUs from "./About-Us";
 import LogoCard from "./LogoCard";
-import InfoCard from "./LogoCard";
 import TeamMembers2 from "./TeamMembers2";
 import WhyTAPCard from "./WhyTAPCard";
 import backgroundIMG from "./bagrand.jpg";
@@ -13,15 +11,17 @@ export default function WelcomePage() {
     backgroundImage: `url(${backgroundIMG})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    width: '100%',
+    overflowx:'hidden',
   }
 
   return (
-    <div style={background}>
+    <div>
     <section className="text-white">
     <div className="text-white" style={{position: "absolute", top: "20px", left: "20px", padding: "0px" }}>
         <LogoCard />
       </div>
-      <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+      <div className="mx-auto px-4 py-32 lg:flex lg:h-screen lg:items-center" style={background}>
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="bg-gradient-to-r from-yellow-300 via-orange-500 to-red-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
             Friendships Made Easy.
