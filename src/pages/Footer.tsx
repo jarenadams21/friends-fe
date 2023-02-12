@@ -10,13 +10,14 @@ const Footer: React.FC = () => {
           </p>
           <ul className="nav justify-content-center justify-content-md-end">
             <li className="nav-item" style={{ fontFamily: '"Futura", sans-serif', color: "white" }}>
-              <a className="nav-link" href="/about">About</a>
+              <a className="nav-link text-reset no-underline hover:scale-90 duration-150" href="/about">About</a>
             </li>
             <li className="nav-item" style={{ fontFamily: '"Futura", sans-serif', color: "white" }}>
-              <a className="nav-link" href="#section1">Contact</a>
+              <a className="nav-link text-reset no-underline hover:scale-90 duration-150" href="#section1">Contact</a>
             </li>
             <li className="nav-item" style={{ fontFamily: '"Futura", sans-serif', color: "white" }}>
-            <a className="nav-link" href="https://twitter.com/TimeAndPlaceMA" target="_blank">Twitter</a>
+            <a className="nav-link text-reset no-underline hover:scale-90 duration-150" href="https://twitter.com/TimeAndPlaceMA" target="_blank">Twitter
+            </a>
             </li>
           </ul>
         </div>
