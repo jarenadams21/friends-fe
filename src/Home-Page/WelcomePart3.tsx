@@ -4,6 +4,7 @@ import LogoCard from "./LogoCard";
 import InfoCard from "./LogoCard";
 import AboutUs from "./About-Us";
 import TeamMembers2 from "./TeamMembers2";
+import WhyTAPCard from "./WhyTAPCard";
 
 export default function WelcomePage() {
   return (

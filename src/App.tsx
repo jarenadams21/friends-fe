@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Feed from "./pages/Feed";
-import Welcome from "./Home-Page/WelcomePart1";
 import Welcome2 from "./Home-Page/WelcomePart2";
 import Welcome3 from "./Home-Page/WelcomePart3";
 
@@ -19,7 +18,7 @@ function App() {
           {/* <Route path="/" element={ <Home/> } /> */}
 
           {/* Welcome1, Welcome2, Welcome3 are all different themes */}
-          <Route path="/" element={<Welcome3 />} />
+          <Route path="/" element={<Welcome2 />} />
           <Route path="/login" element={<LoginScreen />} />
           <Route path="/registration" element={<RegistrationScreen />} />
           <Route path="/profile" element={<Profile />} />

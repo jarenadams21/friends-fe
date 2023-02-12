@@ -10,7 +10,7 @@ function WhyTAPCard() {
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <div>
             <a
-                className="block rounded-xl border border-gray-800 bg-gray-900 p-8 shadow-xl no-underline"
+                className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline"
             >
                 <div className="logo">
           <img src={logo} width="26" />
@@ -25,7 +25,7 @@ function WhyTAPCard() {
             </div>
             <div>
             <a
-                className="block rounded-xl border border-gray-800 bg-gray-900 p-8 shadow-xl no-underline"
+                className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline"
             >
                 <div className="safety">
           <img src={safety} width="37" />
@@ -40,7 +40,7 @@ function WhyTAPCard() {
             </div>
             <div>
             <a
-                className="block rounded-xl border border-gray-800 bg-gray-900 p-8 shadow-xl no-underline"
+                className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline"
             >
                 <div className="snowboard">
           <img src={snowboard} width="41" />
@@ -55,7 +55,7 @@ function WhyTAPCard() {
             </div>
             <div>
             <a
-                className="block rounded-xl border border-gray-800 bg-gray-900 p-8 shadow-xl no-underline"
+                className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline"
             >
                 <div className="world">
           <img src={world} width="41" />

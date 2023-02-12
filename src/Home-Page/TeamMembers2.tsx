@@ -30,8 +30,8 @@ const teamMembers2 = [
 function TeamMembers2() {
   return (
     <div className="container">
-      <center><h1>The team</h1> </center>
-              <hr/>
+      <center><h1 style = {{fontFamily: '"Futura", sans-serif', color: "white"}}>The Team</h1> </center>
+              <hr style = {{color: "white"}}/>
       <div className="row">
         {teamMembers2.map((member, index) => {
           return (
