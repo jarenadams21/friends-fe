@@ -1,7 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Feed from './pages/Feed';
-import Welcome from './pages/Welcome'
+import Welcome from './pages/WelcomePart1'
+import Welcome2 from './pages/WelcomePart2'
+import Welcome3 from './pages/WelcomePart3'
 
 //import LoginScreen from './Login/login-screen';
 import {
@@ -19,7 +21,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* <Route path="/" element={ <Home/> } /> */}
-        <Route path="/" element={<Welcome/>} />
+
+
+        {/* Welcome1, Welcome2, Welcome3 are all different themes */}
+        <Route path="/" element={<Welcome2/>} />
         <Route path="/login" element={ <LoginScreen/> } />
         <Route path="/registration" element={ <RegistrationScreen/> } />
         <Route path="/profile" element={ <Profile/> } />
