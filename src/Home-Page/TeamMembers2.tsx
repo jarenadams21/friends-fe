@@ -30,6 +30,8 @@ const teamMembers2 = [
 function TeamMembers2() {
   return (
     <div className="container">
+      <center><h1>The team</h1> </center>
+              <hr/>
       <div className="row">
         {teamMembers2.map((member, index) => {
           return (
