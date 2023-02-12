@@ -159,7 +159,7 @@ function RegistrationScreen() {
     </div>
       </div>
     <div className="bg-danger">
-        <img src={backdrop} width="1500px"/>
+        <img src={backdrop} className="object-cover" width="1178px"/>
       </div>
     </div>
   );

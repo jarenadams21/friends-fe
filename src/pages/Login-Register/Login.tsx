@@ -99,8 +99,8 @@ function LoginScreen() {
           <LogoCard />
         </div>
       </div>
-      <div className="bg-danger">
-        <img src={backdrop} width="1500px"/>
+      <div className="bg-danger z-0">
+        <img src={backdrop} className="object-cover" width="1178px" />
       </div>
     </div>
   );
