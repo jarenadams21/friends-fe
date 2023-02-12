@@ -63,7 +63,7 @@ function RegistrationScreen() {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between"}}>
+    <div style={{ display: "flex", justifyContent: "space-between", height: "92vh"}}>
     <div className="Container">
     <div className="pt-14 px-8">
       <header className="Header font-sans font-bold" >Sign Up</header>
@@ -154,9 +154,11 @@ function RegistrationScreen() {
         <Link to="/login" className="font-sans font-bold">Sign in</Link>
       </div>
       </div>
+      <div className="relative bottom-0 items-center text-slate-900">
+      <LogoCard/>
     </div>
-    <div className="absolute bottom-0 left-36 text-slate-900"><LogoCard/></div>
-    <div>
+      </div>
+    <div className="bg-danger">
         <img src={backdrop} width="1500px"/>
       </div>
     </div>
