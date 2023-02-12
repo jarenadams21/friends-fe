@@ -5,11 +5,18 @@ import LogoCard from "./LogoCard";
 import InfoCard from "./LogoCard";
 import TeamMembers2 from "./TeamMembers2";
 import WhyTAPCard from "./WhyTAPCard";
+import backgroundIMG from "./bagrand.jpg";
 
 export default function WelcomePage() {
+  const background={
+    backgroundImage: `url(${backgroundIMG})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+  }
+
   return (
-    <div>
-    <section className="bg-gray-900 text-white">
+    <div style={background}>
+    <section className="text-white">
     <div className="text-white" style={{position: "absolute", top: "20px", left: "20px", padding: "0px" }}>
         <LogoCard />
       </div>
@@ -37,7 +44,7 @@ export default function WelcomePage() {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-t bg-gray-900 via-gray-850 from-gray-800">
+      <div className="py-16">
     <WhyTAPCard/>
     </div>
     </section>
