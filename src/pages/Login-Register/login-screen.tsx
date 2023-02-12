@@ -1,9 +1,17 @@
 import { useState } from 'react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './registration-screen.css'
+import axios from 'axios';
+import { url } from '../../constants';
+
+interface User {
+  username: string,
+  password: string,
+}
 
 function LoginScreen() {
+  const nav = useNavigate();
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [passwordShown, setPasswordShown] = useState(false);
@@ -12,10 +20,29 @@ function LoginScreen() {
     setPasswordShown(!passwordShown);
   };
 
+  const handleLogin = (username: string, password: string) => {
+    axios.get(url + "users/login", {
+      params : {
+        username: username,
+        password: password,}}
+    )
+    .then(res => {
+      console.log(res);
+      const id = res.data.id;
+      nav("/feed/" + id)
+    }) 
+    .catch(err => console.log(err));
+  }
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    handleLogin(username, password);
+  }
+
   return (
     <div className="Container">
       <header className="Header">Log in</header>
-      <Form>
+      <Form onSubmit={onSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Control 
             type="username" 
@@ -43,7 +70,7 @@ function LoginScreen() {
       </Form>
       <div className="SwitchLoginCreateGroup">
         <p>Don't have an account?</p>
-        <Link to="/registration">Register</Link>
+        <Link to="/registration/">Register</Link>
       </div>
     </div>
   );

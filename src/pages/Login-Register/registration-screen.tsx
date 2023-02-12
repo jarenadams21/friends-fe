@@ -3,6 +3,7 @@ import { Button, Form, InputGroup } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import './registration-screen.css'
 import axios from 'axios'
+import { url } from '../../constants';
 
 interface User {
   username: string,
@@ -22,6 +23,7 @@ function RegistrationScreen() {
   const [confirmationPassword, setConfirmationPassword] = useState<string>('');
   const [passwordShown, setPasswordShown] = useState<boolean>(false);
   const [confirmationPasswordShown, setConfirmationPasswordShown] = useState<boolean>(false);
+  const [id, setID] = useState<string>('')
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
@@ -35,7 +37,7 @@ function RegistrationScreen() {
       console.log('Passwords do not match')
       return;
     }
-    axios.post("http://172.20.10.2:5000/users/add", {
+    axios.post(url + "users/add", {
       username,
       email,
       password,
@@ -43,7 +45,12 @@ function RegistrationScreen() {
       lastName,})
     .then(res => {
       console.log(res.data);
-      nav("/feed")
+      axios.get(url + "users/getByUsername", {params: {username: username}})
+      .then(response => {
+        setID(response.data.id.toString());
+      })
+      .catch(err => console.log(err));
+      nav("/profile/"+ id)
     }) 
     .catch(err => console.log(err));
   }
