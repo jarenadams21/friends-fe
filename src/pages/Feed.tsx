@@ -1,5 +1,6 @@
 import {Container, Row, Col} from 'react-bootstrap';
 import EventCard from './EventCard';
+import Navbar from './Navbar';
 
 function FeedBanner() {
 return (

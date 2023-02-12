@@ -8,10 +8,6 @@ function Navbar() {
       <Nav className="justify-content-end me-5" 
       activeKey="home">
         <Nav.Item>
-          <Nav.Link href="/">Home</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="my-plans">My Plans</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link href="profile">Profile</Nav.Link>
