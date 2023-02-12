@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import './profile.css';
+import './Profile.css';
 import { Button, Form, Modal, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { url } from '../../constants';
 import { useParams, useNavigate } from 'react-router-dom';
 import { TagOption, TagType } from '../../Common/Types';
 import { MultiSelect } from '../../Common/MultiSelect';
+import Navbar from '../Navbar'
 
 export default function Profile() {
     const params = useParams();
@@ -39,6 +40,8 @@ export default function Profile() {
     }
 
     return (
+        <>
+        <Navbar id={id}/>
         <div className="Container border">
             <header className='ProfileHeader'>Profile</header>
             <Form onSubmit={onSubmit}>
@@ -60,5 +63,6 @@ export default function Profile() {
                 </Button>
             </Form>
         </div>
+        </>
     )
 }

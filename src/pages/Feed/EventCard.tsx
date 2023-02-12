@@ -4,6 +4,7 @@ import { BsBookmarkPlus, BsBookmarkFill } from "react-icons/bs";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import EventProps from "../Props/EventProps";
+import {useParams} from 'react-router-dom';
 
 function BookMark() {
   const [mark, setBookmark] = useState(false);
@@ -28,10 +29,13 @@ function BookMark() {
 }
 
 function TakeToEventButton() {
+  const params  = useParams();
+  const id = params.id;
+
   return (
     <a
       className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-      href="/plan"
+      href="/plan/:id/:eid"
     >
       <span className="sr-only"> Download </span>
 
