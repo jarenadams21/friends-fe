@@ -9,6 +9,7 @@ import { Route, Routes, BrowserRouter } from "react-router-dom";
 import RegistrationScreen from "./pages/Login-Register/registration-screen";
 import LoginScreen from "./pages/Login-Register/login-screen";
 import Profile from "./pages/Profile/profile";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/feed" element={<Feed />} />
         </Routes>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

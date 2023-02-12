@@ -39,9 +39,11 @@ const teamMembers2 = [
     link: "https://www.linkedin.com/in/cole-harvey-6038ab23b/",
   },
 ];
+
+
 function TeamMembers2() {
   return (
-    <div className="container">
+    <div className="container" id="section1">
       <center>
         <h1 style={{ fontFamily: '"Futura", sans-serif', color: "white" }}>
           The Team
