@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import './registration-screen.css'
 import axios from 'axios'
 import { url } from '../../constants';
+import backdrop from "./backdrop.jpg";
+import LogoCard from "../../Home-Page/LogoCard";
 
 interface User {
   username: string,
@@ -61,8 +63,11 @@ function RegistrationScreen() {
   }
 
   return (
+    <div style={{ display: "flex", justifyContent: "space-between"}}>
     <div className="Container">
-      <header className="Header">Sign up</header>
+    <div className="pt-14 px-8">
+      <header className="Header font-sans font-bold" >Sign Up</header>
+      <hr className="pt-0" />
       <Form className='Form' onSubmit={onSubmit}>
         <Form.Group className="mb-3">
           <Form.Control 
@@ -140,13 +145,19 @@ function RegistrationScreen() {
               Passwords do not match!
             </Form.Control.Feedback>
         </InputGroup>
-        <Button variant="primary" type="submit" className='SubmitButton'>
+        <Button variant="danger" type="submit" className='SubmitButton'>
           Sign up
         </Button>
       </Form>
       <div className="SwitchLoginCreateGroup">
         <p>Already have an account?</p>
-        <Link to="/login">Sign in</Link>
+        <Link to="/login" className="font-sans font-bold">Sign in</Link>
+      </div>
+      </div>
+    </div>
+    <div className="absolute bottom-0 left-36 text-slate-900"><LogoCard/></div>
+    <div>
+        <img src={backdrop} width="1500px"/>
       </div>
     </div>
   );

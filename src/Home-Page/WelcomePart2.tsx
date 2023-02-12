@@ -10,7 +10,7 @@ export default function WelcomePage() {
   return (
     <div>
     <section className="bg-gray-900 text-white">
-    <div style={{position: "absolute", top: "20px", left: "20px", padding: "0px" }}>
+    <div className="text-white" style={{position: "absolute", top: "20px", left: "20px", padding: "0px" }}>
         <LogoCard />
       </div>
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
