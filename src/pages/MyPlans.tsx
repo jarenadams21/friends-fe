@@ -1,7 +1,8 @@
 import { Container } from 'react-bootstrap';
 import EventCard from './Feed/EventCard';
 import EventCardsList from './Feed/EventCardsList';
-
+import {RiSearchLine} from 'react-icons/ri';
+ 
 const plans:any = ['hai', 'hai']
 
 function CreateEvent() {
