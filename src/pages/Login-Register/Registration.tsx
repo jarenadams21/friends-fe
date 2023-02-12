@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import './registration-screen.css'
+import './Registration.css'
 import axios from 'axios'
 import { url } from '../../constants';
 import backdrop from "./backdrop.jpg";
@@ -35,6 +35,7 @@ function RegistrationScreen() {
   };
 
   const handleRegistration = (username: string, email: string, password: string, confirmationPassword:string, firstName: string, lastName: string) => {
+    let id: string;
     if(password !== confirmationPassword) {
       console.log('Passwords do not match')
       return;
@@ -46,13 +47,12 @@ function RegistrationScreen() {
       firstName,
       lastName,})
     .then(res => {
-      console.log(res.data);
       axios.get(url + "users/getByUsername", {params: {username: username}})
       .then(response => {
-        setID(response.data.id.toString());
+        id = response.data;
+        nav("/profile/"+ id)
       })
       .catch(err => console.log(err));
-      nav("/profile/"+ id)
     }) 
     .catch(err => console.log(err));
   }

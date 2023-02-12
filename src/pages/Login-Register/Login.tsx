@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button, Form, InputGroup } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import './registration-screen.css'
+import './Registration.css'
 import axios from 'axios';
 import { url } from '../../constants';
 import backdrop from "./backdrop.jpg";
@@ -30,12 +30,12 @@ function LoginScreen() {
       }
     }
     )
-      .then(res => {
-        console.log(res);
-        const id = res.data.id;
-        nav("/feed/" + id)
-      })
-      .catch(err => console.log(err));
+    .then(res => {
+      console.log(res);
+      const id = res.data.toString();
+      nav("/feed/" + id)
+    }) 
+    .catch(err => console.log(err));
   }
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
