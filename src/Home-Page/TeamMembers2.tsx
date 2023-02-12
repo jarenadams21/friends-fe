@@ -44,10 +44,6 @@ function TeamMembers2() {
     <div className="container">
       <center><h1 style = {{fontFamily: '"Futura", sans-serif', color: "white"}}>The Team</h1> </center>
               <hr style = {{color: "white"}}/>
-      <center>
-        <h1>The Team</h1>{" "}
-      </center>
-      <hr />
       <div className="row">
         {teamMembers2.map((member, index) => {
           return (
