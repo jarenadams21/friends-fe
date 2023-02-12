@@ -31,7 +31,7 @@ function TakeToEventButton() {
   return (
     <a
       className="inline-block rounded-full border border-indigo-600 p-3 text-indigo-600 hover:bg-indigo-600 hover:text-white focus:outline-none focus:ring active:bg-indigo-500"
-      href="/plan"
+      href="/plan/:id/:id"
     >
       <span className="sr-only"> Download </span>
 

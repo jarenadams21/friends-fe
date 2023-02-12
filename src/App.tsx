@@ -25,8 +25,8 @@ function App() {
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/feed/:id" element={<Feed />} />
           <Route path="/about" element={<LearnMore />} />
-          <Route path="/my-plans" element={<MyPlans />} />
-          <Route path="/plan" element={<Event/>}/>
+          <Route path="/my-plans/:id" element={<MyPlans />} />
+          <Route path="/plan/:id/:id" element={<Event/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>
