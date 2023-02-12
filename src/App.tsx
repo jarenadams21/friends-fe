@@ -10,6 +10,7 @@ import RegistrationScreen from "./pages/Login-Register/Registration";
 import LoginScreen from "./pages/Login-Register/Login";
 import Profile from "./pages/Profile/ProfileScreen";
 import Footer from "./pages/Footer";
+import LearnMore from "./pages/LearnMore";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/registration" element={<RegistrationScreen />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/feed/:id" element={<Feed />} />
+          <Route path="/about" element={<LearnMore />} />
         </Routes>
       </BrowserRouter>
       <Footer/>
