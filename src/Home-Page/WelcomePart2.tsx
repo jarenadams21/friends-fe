@@ -1,5 +1,6 @@
 import React from "react";
 import "react-bootstrap";
+import LearnMore from "../pages/LearnMore";
 import AboutUs from "./About-Us";
 import LogoCard from "./LogoCard";
 import InfoCard from "./LogoCard";
@@ -48,19 +49,24 @@ export default function WelcomePage() {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-t bg-gray-900 via-gray-850 from-gray-800">
+        <div
+        style={{ padding: "100px" }}
+        className="bg-gradient-to-t bg-gray-900 via-gray-850 from-gray-800"
+      >
+        <LearnMore />
+      </div>
+        <div className="bg-gradient-to-t bg-gray-800 via-gray-750 from-gray-700">
           <WhyTAPCard />
         </div>
       </section>
       <div
-        style={{ padding: "50px" }}
-        className="bg-gradient-to-t bg-gray-800 via-gray-700 from-gray-600"
+        style={{ padding: "100px" }}
+        className="bg-gradient-to-t bg-gray-700 via-gray-600 from-gray-500"
       >
         <AboutUs />
       </div>
       <div
-        style={{ padding: "10px" }}
-        className="bg-gradient-to-t bg-gray-600 via-gray-400 from-gray-200"
+        className="bg-gradient-to-t bg-gray-500 via-gray-400 from-gray-300"
       >
         <TeamMembers2 />
       </div>

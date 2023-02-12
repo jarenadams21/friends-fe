@@ -16,10 +16,8 @@ export default function LearnMore() {
 
   return (
     <div>
-      <LogoCard/>
-    
     <Container>
-      <section className="text-black">
+      <section className="text-white">
           <h1 style={headerStyle}>About Time N' Place </h1> <hr />
           <p style={{ ...paragraphStyle, padding: "5px" }}>
             Time N' Place is a social platform that encourages college students
