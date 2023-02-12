@@ -52,7 +52,8 @@ function EventCard() {
   return (
     <Card 
     className="hover:border-blue-600"
-    style={{width: '18rem'}}
+    style={{width: '18rem' , margin: '3rem'}}
+    
     >  
       <Card.Img className="mt-2.5" variant="top" src="https://www.thisiscolossal.com/wp-content/uploads/2019/02/moon_crop.jpg"/>
       <Card.Body>
