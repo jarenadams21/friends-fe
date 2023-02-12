@@ -1,1 +1,1 @@
-export const url = 'http://172.20.10.2:5000/';
+export const url = 'https://hackbeanpot2023.herokuapp.com/';
