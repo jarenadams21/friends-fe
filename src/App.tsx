@@ -1,7 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Feed from "./pages/Feed";
-import Welcome from "./Home-Page/WelcomePart1";
 import Welcome2 from "./Home-Page/WelcomePart2";
 import Welcome3 from "./Home-Page/WelcomePart3";
 
