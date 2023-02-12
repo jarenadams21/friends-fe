@@ -5,6 +5,7 @@ import EventProps from "../Props/EventProps";
 import EventCard from "./EventCard";
 import './cards.css'
 import LogoCard from "../../Home-Page/LogoCard";
+import { ButtonToCreatePost } from "../../PostModal";
 
 export default function EventCardsList() {
     const [events, setEvents] = useState<EventProps[]>([])
@@ -45,7 +46,10 @@ export default function EventCardsList() {
     return (
         <div>
             <LogoCard/>
-            <h2 className="h2">Events Feed</h2>
+            <div className="headers">
+                <h2 className="h2">Events Feed</h2>
+                <ButtonToCreatePost/>
+            </div>
             <div className="d-flex flex-wrap justify-content-between p-2 container">
                 {eventCardsList()}
             </div>
