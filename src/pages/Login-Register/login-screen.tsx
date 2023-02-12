@@ -47,7 +47,7 @@ function LoginScreen() {
     <div style={{ display: "flex", justifyContent: "space-between"}}>
       <div className="Container">
         <div className="pt-28 px-8">
-        <header className="Header font-sans">Log in</header>
+        <header className="Header font-sans font-bold">Log in</header>
         <hr className="pt-0" />
         <Form onSubmit={onSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -81,9 +81,9 @@ function LoginScreen() {
         </div>
         </div>
         </div>
-        <div className="absolute bottom-0 left-36"><LogoCard/></div>
+        <div className="absolute bottom-0 left-36 text-slate-900"><LogoCard/></div>
       <div>
-        <img src={backdrop} width="1500px"/>
+        <img src={backdrop}width="1500px"/>
       </div>
     </div>
   );
