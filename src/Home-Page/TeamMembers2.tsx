@@ -5,26 +5,38 @@ const teamMembers2 = [
   {
     name: "Jaren Adams",
     photo: require("./Jaren.jpg"),
+    desc: "2nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/jarenadams/"
   },
   {
     name: "Caleb Lee",
     photo: require("./Kale.jpg"),
+    desc: "2nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/caleb-lee-b481b8256/"
   },
   {
     name: "Tunwa (Win) Tongtawee",
     photo: require("./Win.jpg"),
+    desc: "2nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/tunwa-tongtawee-336b791a4/"
   },
   {
     name: "Tristen Li",
     photo: require("./Tris.jpg"),
+    desc: "3nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/tristen-li/"
   },
   {
-    name: "Lucy",
+    name: "Lucy Ying",
     photo: require("./Lucy.jpg"),
+    desc: "3nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/lucy-ying/"
   },
   {
     name: "Cole Harvey",
     photo: require("./Cole.jpg"),
+    desc: "2nd year CS student at NEU",
+    link: "https://www.linkedin.com/in/cole-harvey-6038ab23b/"
   },
 ];
 function TeamMembers2() {
@@ -32,11 +44,18 @@ function TeamMembers2() {
     <div className="container">
       <center><h1 style = {{fontFamily: '"Futura", sans-serif', color: "white"}}>The Team</h1> </center>
               <hr style = {{color: "white"}}/>
+      <center>
+        <h1>The Team</h1>{" "}
+      </center>
+      <hr />
       <div className="row">
         {teamMembers2.map((member, index) => {
           return (
             <div key={index} className="col-lg-4 mb-4">
-              <a href="#" className="group relative block bg-black no-underline">
+              <a
+                href="#"
+                className="group relative block bg-black no-underline"
+              >
                 <img
                   alt="Developer"
                   src={member.photo}
@@ -51,12 +70,9 @@ function TeamMembers2() {
                   <p className="text-2xl font-bold text-white">{member.name}</p>
 
                   <div className="mt-64">
-                    <div
-                      className="translate-y-8 transform opacity-100 transition-all group-hover:translate-y-0 group-hover:opacity-100"
-                    >
-                      <p className="text-sm text-white">
-                        some text here
-                      </p>
+                    <div className="translate-y-2 transform opacity-100 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+                      <p className="text-sm text-white">{member.desc}</p>
+                      <a className="btn btn-primary" href={member.link}>LinkedIn</a>
                     </div>
                   </div>
                 </div>
