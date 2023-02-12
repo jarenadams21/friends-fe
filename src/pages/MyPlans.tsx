@@ -1,5 +1,6 @@
 import { Container } from 'react-bootstrap';
-import EventCard from './EventCard';
+import EventCard from './Feed/EventCard';
+import EventCardsList from './Feed/EventCardsList';
 
 const myPlans = [];
 
@@ -37,7 +38,7 @@ function MyPlans() {
         <Container>
             <HeaderTemplate/>
             <Container>
-                <EventCard/>
+                <EventCardsList/>
             </Container>
         </Container>
     )

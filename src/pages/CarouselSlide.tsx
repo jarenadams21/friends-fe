@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import EventCard from './EventCard';
-
+import EventCard from './Feed/EventCard';
+/*
 function CarouselSlide() {
   
   return (
@@ -39,4 +39,4 @@ function CarouselSlide() {
   );
 }
 
-export default CarouselSlide;
+export default CarouselSlide;*/

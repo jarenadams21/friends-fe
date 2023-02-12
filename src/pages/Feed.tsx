@@ -1,5 +1,6 @@
 import {Container, Row, Col} from 'react-bootstrap';
-import EventCard from './EventCard';
+import EventCard from './Feed/EventCard';
+import EventCardsList from './Feed/EventCardsList';
 import Navbar from './Navbar';
 
 function FeedBanner() {
@@ -12,7 +13,7 @@ return (
     </Container>
 )
 }
-
+/*
 function CardRow() {
     return (
         <Container className="d-flex justify-content-evenly">
@@ -23,7 +24,7 @@ function CardRow() {
         </Row>
     </Container>
     )
-}
+}*/
 
 function InfoCard() {
     return (
@@ -66,17 +67,17 @@ function InfoRowUnderBanner() {
 }
 
 
-function Home() {
+function Feed() {
     return (<div className="bg-indigo-300">
     
+    <Navbar/>
     <FeedBanner/>
     <InfoRowUnderBanner/>
-    <CardRow/>
-    <CardRow/>
-    
+    <EventCardsList />
+
     </div>
 
     )
 }
 
-export default Home ;
+export default Feed ;
