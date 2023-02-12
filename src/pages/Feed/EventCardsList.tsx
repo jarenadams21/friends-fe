@@ -4,6 +4,7 @@ import { url } from "../../constants";
 import EventProps from "../Props/EventProps";
 import EventCard from "./EventCard";
 import './cards.css'
+import LogoCard from "../../Home-Page/LogoCard";
 
 export default function EventCardsList() {
     const [events, setEvents] = useState<EventProps[]>([])
@@ -42,8 +43,12 @@ export default function EventCardsList() {
     }
 
     return (
-        <div className="d-flex flex-wrap justify-content-between p-2">
-            {eventCardsList()}
+        <div>
+            <LogoCard/>
+            <h2 className="h2">Events Feed</h2>
+            <div className="d-flex flex-wrap justify-content-between p-2 container">
+                {eventCardsList()}
+            </div>
         </div>
     );
 }
