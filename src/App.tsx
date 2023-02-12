@@ -24,7 +24,6 @@ function App() {
           <Route path="/registration" element={<RegistrationScreen />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/feed/:id" element={<Feed />} />
-          <Route path="/about" element={<LearnMore />} />
           <Route path="/my-plans" element={<MyPlans />} />
           <Route path="/plan" element={<Event/>}/>
         </Routes>

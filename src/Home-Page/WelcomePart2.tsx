@@ -42,7 +42,7 @@ export default function WelcomePage() {
 
               <a
                 className="font-bold block w-full rounded border border-red-600 px-12 py-3 text-sm text-white hover:bg-red-600 focus:outline-none focus:ring active:bg-red-500 sm:w-auto no-underline"
-                href="/about"
+                href="#section2"
               >
                 Learn More
               </a>
@@ -50,7 +50,7 @@ export default function WelcomePage() {
           </div>
         </div>
         <div
-        style={{ padding: "100px" }}
+        style={{ padding: "150px" }}
         className="bg-gradient-to-t bg-gray-900 via-gray-850 from-gray-800"
       >
         <LearnMore />
@@ -60,7 +60,7 @@ export default function WelcomePage() {
         </div>
       </section>
       <div
-        style={{ padding: "100px" }}
+        style={{ padding: "150px" }}
         className="bg-gradient-to-t bg-gray-700 via-gray-600 from-gray-500"
       >
         <AboutUs />
