@@ -26,7 +26,7 @@ function App() {
           <Route path="/feed/:id" element={<Feed />} />
           <Route path="/about" element={<LearnMore />} />
           <Route path="/my-plans/:id" element={<MyPlans />} />
-          <Route path="/plan/:id/:id" element={<Event/>}/>
+          <Route path="/plan/:id/:eid" element={<Event/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>
