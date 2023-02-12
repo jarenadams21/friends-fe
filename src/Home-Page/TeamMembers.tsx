@@ -8,7 +8,7 @@ const teamMembers = [
   },
   {
     name: "Caleb Lee",
-    photo: require("./Caleb.jpg"),
+    photo: require("./Kale.jpg"),
   },
   {
     name: "Tunwa (Win) Tongtawee",

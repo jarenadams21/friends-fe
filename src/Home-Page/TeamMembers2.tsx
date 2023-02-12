@@ -50,7 +50,7 @@ function TeamMembers2() {
 
                   <div className="mt-64">
                     <div
-                      className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+                      className="translate-y-8 transform opacity-100 transition-all group-hover:translate-y-0 group-hover:opacity-100"
                     >
                       <p className="text-sm text-white">
                         some text here
