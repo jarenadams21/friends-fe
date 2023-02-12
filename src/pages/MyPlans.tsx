@@ -1,6 +1,6 @@
-import { Button, Container } from 'react-bootstrap';
-import EventCard from './EventCard';
-import {RiSearchLine} from 'react-icons/ri'
+import { Container } from 'react-bootstrap';
+import EventCard from './Feed/EventCard';
+import EventCardsList from './Feed/EventCardsList';
 
 const plans:any = ['hai', 'hai']
 
@@ -156,9 +156,8 @@ function MyPlans() {
     return (
         <Container>
             <HeaderTemplate/>
-            <Search/>
-            <Container className="d-flex justify-content-evenly">
-                {plans.map(EventCard)}
+            <Container>
+                <EventCardsList/>
             </Container>
           
             <CreateEvent/>
