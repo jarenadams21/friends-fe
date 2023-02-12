@@ -5,8 +5,10 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Navbar() {
   return (
     <>
-      <Nav className="justify-content-center" 
+      <Nav className="justify-content-end me-5" 
       activeKey="home">
+        <Nav.Item>
+        </Nav.Item>
         <Nav.Item>
           <Nav.Link href="feed">Home</Nav.Link>
         </Nav.Item>
@@ -16,11 +18,7 @@ function Navbar() {
         <Nav.Item>
           <Nav.Link href="profile">Profile</Nav.Link>
         </Nav.Item>
-        <Nav.Item>
-          <Nav.Link href="disabled" disabled>
-            Disabled
-          </Nav.Link>
-        </Nav.Item>
+        
       </Nav>
     </>
   );
