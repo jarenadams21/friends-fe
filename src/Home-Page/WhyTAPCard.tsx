@@ -9,7 +9,7 @@ function WhyTAPCard() {
     return (
         <Container>
             <div className="flex flex-wrap justify-between">
-            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline">
+            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline hover:-translate-y-1 hover:scale-110 duration-150">
                 <div className="logo">
                   <img src={logo} width="26" />
                 </div>
@@ -20,7 +20,7 @@ function WhyTAPCard() {
                     TAP uses geolocation to find plans and potential friends near you.
                 </p>
             </div>
-            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline">
+            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline hover:-translate-y-1 hover:scale-110 duration-150">
                 <div className="safety">
                   <img src={safety} width="37" />
                 </div>
@@ -31,7 +31,7 @@ function WhyTAPCard() {
                     Not only can you create plans with locations and time, you can choose who joins.
                 </p>
             </div>
-            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline">
+            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline hover:-translate-y-1 hover:scale-110 duration-150">
                 <div className="snowboard">
                   <img src={snowboard} width="41" />
                 </div>
@@ -42,7 +42,7 @@ function WhyTAPCard() {
                     Select your interests to generate a curated feed that suits your taste.
                 </p>
             </div>
-            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline">
+            <div style={{ maxWidth: "20%" }} className="block rounded-xl border border-gray-800 bg-gray-800 p-8 shadow-xl no-underline hover:-translate-y-1 hover:scale-110 duration-150">
                 <div className="world">
                   <img src={world} width="41" />
                 </div>
