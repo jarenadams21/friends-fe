@@ -2,12 +2,13 @@ import { Container } from 'react-bootstrap';
 import EventCard from './Feed/EventCard';
 import EventCardsList from './Feed/EventCardsList';
 import {RiSearchLine} from 'react-icons/ri';
+import Navbar from './Navbar';
  
 const plans:any = ['hai', 'hai']
 
 function CreateEvent() {
   return (
-    <div className="mt-5 sm:flex sm:items-center sm:justify-center sm:gap-4">
+    <div className="mt-5 mb-5 sm:flex sm:items-center sm:justify-center sm:gap-4">
     <p className="mt-3 text-sm text-gray">
           Let's make a plan! 🎉
         </p>
@@ -155,14 +156,17 @@ function Search() {
 
 function MyPlans() {
     return (
+      <>
+      <Navbar/>
         <Container>
             <HeaderTemplate/>
+            <CreateEvent/>
+            <Search/>
             <Container>
                 <EventCardsList/>
             </Container>
-          
-            <CreateEvent/>
         </Container>
+        </>
     )
 }
 

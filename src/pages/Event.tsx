@@ -3,6 +3,8 @@ import { BsBookmarkPlus, BsBookmarkFill } from 'react-icons/bs';
 import { useState } from 'react';
 import { FcCalendar } from 'react-icons/fc';
 import {SiGooglemaps} from 'react-icons/si';
+import Navbar from './Navbar';
+
 /*
     To Display:
         -> Location 
@@ -83,7 +85,9 @@ function TagBubbles(props:any) {
 
 function Event() {
     return (
-        <Container className="p-5 bg-gradient-to-l from-green-50 via-blue-50 to-purple-50 mt-5 d-flex justify-content-evenly flex-column">
+        <>
+        <Navbar/>
+                <Container className="p-5 bg-gradient-to-l from-green-50 via-blue-50 to-purple-50 mt-5 d-flex justify-content-evenly flex-column">
             <div className="">
             <img 
             src={p1.img}
@@ -145,13 +149,14 @@ function Event() {
             <div className="mb-5 mt-5">
             --Placeholder Div--
             </div>
-            <div className="tags mb-5">
+            <div className="tags">
             <h3 className="mb-3">
                 Tags
             </h3>
             {p1.tags.map(TagBubbles)}
             </div>
             </Container>
+            </>
     )
 }
 

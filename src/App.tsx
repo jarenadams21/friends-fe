@@ -2,6 +2,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Feed from "./pages/Feed";
 import Welcome from "./Home-Page/WelcomePart2";
+import MyPlans from "./pages/MyPlans";
+import Event from "./pages/Event";
 
 
 //import LoginScreen from './Login/login-screen';
@@ -23,6 +25,8 @@ function App() {
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/feed/:id" element={<Feed />} />
           <Route path="/about" element={<LearnMore />} />
+          <Route path="/my-plans" element={<MyPlans />} />
+          <Route path="/plan" element={<Event/>}/>
         </Routes>
       </BrowserRouter>
       <Footer/>
